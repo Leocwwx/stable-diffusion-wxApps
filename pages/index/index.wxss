@@ -1,0 +1,48 @@
+.mainPositive{
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+.positive{
+  border:1px solid rgb(26, 0, 0);
+  padding: 10rpx;
+  background-color: rgb(22, 1, 1);
+  width: 300px;
+  height:50px;
+  color:green;
+  border-radius: 8px ;
+  margin-right: 0;
+  margin-left: auto;
+}
+.initPositive{
+  border: 2px solid rgb(1, 1, 41);
+  background-color:rgb(33, 4, 61);
+  height: 20px;
+  width: 80px;
+ color: gainsboro;
+ position: relative;
+}
+.select{
+  position: absolute;
+  z-index: 10;
+  border: 2rpx solid #aaaaaa;
+  padding: 0 8rpx;
+  top:46rpx;
+  left: 0rpx;
+  width: 100%;
+  overflow: auto;
+  height: 0;
+  max-height: 200rpx;
+  background-color:rgb(54, 4, 4);
+  box-sizing: border-box;
+  transition: height 0.5s;/* 高度变换过渡 */
+  font-size: 13px;
+}
+.select .type{
+  color: #aaaaaa;
+  border-top: 2px solid #b11111;
+  padding: 6rpx;
+}
+.select :first-child{
+  border: 0;
+}

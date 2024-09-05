@@ -1,0 +1,50 @@
+<!--pages/index/index.wxml-->
+<!--正面提示部分-->
+<span>
+<text style="font-size: 16px; color: #333; font-weight: bold; margin-left: 10px;">正面提示词</text>
+</span>
+
+<view class="mainPositive">
+  <view class="initPositive" bindtap="select">
+  <view style="display: inline-block;">{{positiveString!=""?positiveString:'起手式'}}</view>
+  <view class="select" style = "{{isSelect?'height:'+54*positiveList.length+'rpx;':'border:0'}}">
+    <view class="type" catchtap="getType" wx:for="{{positiveList}}" data-key="{{item.key}}" wx:key="key">{{item.value}}</view>
+  </view>
+</view>
+<view wx:if="{{initPositivePrompt==''}}">
+  <view><textarea class="positive" placeholder="此处若为空，图片可能不好哦！！" disabled="true"></textarea></view>
+</view>
+<view wx:else>
+  <view><textarea class="positive" value="{{initPositivePrompt}}" disabled="true"></textarea></view>
+</view>
+</view>
+
+<view>
+<textarea class="positive" placeholder="请输入提示词" bindinput="remarkInputAction"></textarea>
+</view>
+<!--正面提示部分-->
+
+<!--负面提示部分-->
+<span>
+<text style="font-size: 16px; color: #333; font-weight: bold; margin-left: 10px;">负面提示词</text>
+</span>
+
+<view class="mainPositive">
+  <view class="initPositive" bindtap="select">
+  <view style="display: inline-block;">{{positiveString!=""?positiveString:'起手式'}}</view>
+  <view class="select" style = "{{isSelect?'height:'+54*positiveList.length+'rpx;':'border:0'}}">
+    <view class="type" catchtap="getType" wx:for="{{positiveList}}" data-key="{{item.key}}" wx:key="key">{{item.value}}</view>
+  </view>
+</view>
+<view wx:if="{{initPositivePrompt==''}}">
+  <view><textarea class="positive" placeholder="此处若为空，图片可能不好哦！！" disabled="true"></textarea></view>
+</view>
+<view wx:else>
+  <view><textarea class="positive" value="{{initPositivePrompt}}" disabled="true"></textarea></view>
+</view>
+</view>
+
+<view>
+<textarea class="positive" placeholder="请输入提示词" bindinput="remarkInputAction"></textarea>
+</view>
+<!--负面面提示部分-->
