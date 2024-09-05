@@ -7,7 +7,7 @@
 <view class="mainPositive">
   <view class="initPositive" bindtap="select">
   <view style="display: inline-block;">{{positiveString!=""?positiveString:'起手式'}}</view>
-  <view class="select" style = "{{isSelect?'height:'+54*positiveList.length+'rpx;':'border:0'}}">
+  <view class="select" style = "{{isPositiveSelect?'height:'+54*positiveList.length+'rpx;':'border:0'}}">
     <view class="type" catchtap="getType" wx:for="{{positiveList}}" data-key="{{item.key}}" wx:key="key">{{item.value}}</view>
   </view>
 </view>
@@ -32,7 +32,7 @@
 <view class="mainPositive">
   <view class="initPositive" bindtap="select">
   <view style="display: inline-block;">{{positiveString!=""?positiveString:'起手式'}}</view>
-  <view class="select" style = "{{isSelect?'height:'+54*positiveList.length+'rpx;':'border:0'}}">
+  <view class="select" style = "{{isPositiveSelect?'height:'+54*positiveList.length+'rpx;':'border:0'}}">
     <view class="type" catchtap="getType" wx:for="{{positiveList}}" data-key="{{item.key}}" wx:key="key">{{item.value}}</view>
   </view>
 </view>

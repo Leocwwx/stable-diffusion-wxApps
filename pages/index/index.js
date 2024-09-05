@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isSelect:false,
+    isPositiveSelect:false,
     positiveList:[
             {key:0,value:"无"},
             {key:1,value:"动漫-魔法"},
@@ -12,14 +12,21 @@ Page({
           ],
     positiveString:"",
     textareaText:"",
-    initPositivePrompt:""
-
-    
+    initPositivePrompt:"",
+ 
+    isNegativeSelect:false,
+    negativeList:[
+        {key:0,value:"无"},
+        {key:1,value:"常规"}
+    ],
+    negativeString:'',
+    negativeTarea:'',
+    initNegativePrompt:''
   },
 
   select:function(){
-    var isSelect = this.data.isSelect
-    this.setData({isSelect:!isSelect})
+    var isSelect = this.data.isPositiveSelect
+    this.setData({isPositiveSelect:!isSelect})
   },
 
   getType:function(e)
@@ -27,7 +34,7 @@ Page({
     let key = parseInt(e.currentTarget.dataset.key); 
     let selectedType = this.data.positiveList.find(item => item.key === key);
     this.setData({
-      isSelect:false,
+      isPositiveSelect:false,
     })
     switch (key) {
       case 0:
