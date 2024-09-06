@@ -3,6 +3,7 @@
   display: flex;
   width: 100%;
 }
+
 .positive{
   border:1px solid rgb(26, 0, 0);
   padding: 10rpx;
@@ -14,6 +15,19 @@
   margin-right: 0;
   margin-left: auto;
 }
+
+.negative{
+  border:1px solid rgb(201, 16, 139);
+  padding: 10rpx;
+  background-color: rgb(221, 30, 110);
+  width: 300px;
+  height:50px;
+  color:rgb(64, 31, 209);
+  border-radius: 8px ;
+  margin-right: 0;
+  margin-left: auto;
+}
+
 .initPositive{
   border: 2px solid rgb(1, 1, 41);
   background-color:rgb(33, 4, 61);
@@ -22,6 +36,7 @@
  color: gainsboro;
  position: relative;
 }
+
 .select{
   position: absolute;
   z-index: 10;
@@ -38,6 +53,7 @@
   transition: height 0.5s;/* 高度变换过渡 */
   font-size: 13px;
 }
+
 .select .type{
   color: #aaaaaa;
   border-top: 2px solid #b11111;
@@ -45,4 +61,77 @@
 }
 .select :first-child{
   border: 0;
+}
+
+.selectNegative{
+  position: absolute;
+  z-index: 10;
+  border: 2rpx solid #aaaaaa;
+  padding: 0 8rpx;
+  top:46rpx;
+  left: 0rpx;
+  width: 100%;
+  overflow: auto;
+  height: 0;
+  max-height: 200rpx;
+  background-color:rgb(54, 4, 4);
+  box-sizing: border-box;
+  transition: height 0.5s;/* 高度变换过渡 */
+  font-size: 13px;
+}
+.selectNegative .type{
+  color: #aaaaaa;
+  border-top: 2px solid #b11111;
+  padding: 6rpx;
+}
+.selectNegative :first-child{
+  border: 0;
+}
+
+.recovery_other_line {
+  display: flex;
+  line-height: 124rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.recovery_other_line .upload_img {
+  width: 36rpx;
+  height: 36rpx;
+}
+.recovery_other_line .other_text {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+.choose_upload_view {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.choose_upload_item {
+  margin-left: 38rpx;
+  position: relative;
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.choose_upload_view .choose_upload_img {
+  width: 100rpx;
+  height: 100rpx;
+}
+.choose_upload_view .remove_img_icon {
+  padding: 4rpx;
+  position:absolute;
+  top: -15rpx;
+  right: -13rpx;
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .5);
+}
+.other_upload {
+  margin-left: 15rpx;
+  width: 80rpx;
 }

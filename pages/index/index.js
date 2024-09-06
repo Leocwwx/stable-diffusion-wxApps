@@ -29,6 +29,11 @@ Page({
     this.setData({isPositiveSelect:!isSelect})
   },
 
+  selectNegative:function(){
+    var isSelect = this.data.isNegativeSelect;
+    this.setData({isNegativeSelect:!isSelect})
+  },
+
   getType:function(e)
   {
     let key = parseInt(e.currentTarget.dataset.key); 
@@ -52,7 +57,38 @@ Page({
       case 2:
         this.setData({
           positiveString:selectedType.value,
-          initPositivePrompt:"lotsofhands",
+          initPositivePrompt:"beautiful",
+        })
+        break;
+      default:
+        break;
+    }
+  },
+
+  getNegativeType:function(e)
+  {
+    let key = parseInt(e.currentTarget.dataset.key); 
+    let selectedType = this.data.negativeList.find(item => item.key === key);
+    this.setData({
+      isNegativeSelect:false,
+    })
+    switch (key) {
+      case 0:
+        this.setData({
+          negativeString:"起手式",
+          initNegativePrompt:'',
+        })
+        break;
+      case 1:
+        this.setData({
+          negativeString:selectedType.value,
+          initNegativePrompt:"worst",
+        })
+        break;
+      case 2:
+        this.setData({
+          negativeString:selectedType.value,
+          initNegativePrompt:"lotsofhands",
         })
         break;
       default:
@@ -62,11 +98,21 @@ Page({
 
   remarkInputAction:function(options)
   {
-      let test = options.detail.value;
+      let temp = options.detail.value;
       console.log('curareatxt:'+this.data.textareaText);
-      console.log('test1:'+test);
+      console.log('test1:'+temp);
       this.setData({
-        textareaText:test
+        textareaText:temp
+      })
+  },
+
+  remarkInputNegativeAction:function(options)
+  {
+      let temp = options.detail.value;
+      console.log('curareatxt:'+this.data.negativeTarea);
+      console.log('testne:'+temp);
+      this.setData({
+        negativeTarea:temp
       })
   },
   /**
