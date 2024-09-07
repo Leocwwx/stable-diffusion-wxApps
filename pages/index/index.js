@@ -21,7 +21,9 @@ Page({
     ],
     negativeString:'',
     negativeTarea:'',
-    initNegativePrompt:''
+    initNegativePrompt:'',
+
+    isUploadImgBtnClick:false
   },
 
   select:function(){
@@ -169,5 +171,14 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  uploadImgSlt:function()
+  {
+      console.log("点击了上传按钮");
+      this.setData({
+        isUploadImgBtnClick:true
+      })
   }
 })
+
