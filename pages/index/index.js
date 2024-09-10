@@ -23,7 +23,8 @@ Page({
     negativeTarea:'',
     initNegativePrompt:'',
 
-    isUploadImgBtnClick:false
+    isUploadImgBtnClick:false,
+    imagePath:''
   },
 
   select:function(){
@@ -176,9 +177,25 @@ Page({
   uploadImgSlt:function()
   {
       console.log("点击了上传按钮");
-      this.setData({
-        isUploadImgBtnClick:true
-      })
+      wx.chooseMedia(
+        {
+            count:1,
+            mediaType:['image'],
+            sourceType:['camera','album'],
+            success: (res) => {
+              // 选择媒体成功后的回调
+              console.log(res.tempFiles); // 打印选择的媒体文件信息
+              // 获取第一个媒体文件的临时路径
+              this.setData({
+                imagePath: res.tempFiles[0].tempFilePath
+              });
+            },
+            fail: (err) => {
+              // 选择媒体失败后的回调
+              console.error('选择媒体失败', err);
+            }
+        }
+      )
   }
 })
 

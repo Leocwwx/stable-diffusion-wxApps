@@ -87,3 +87,16 @@
 .selectNegative :first-child{
   border: 0;
 }
+
+.imgPart {
+  padding: 20px;
+}
+
+.uploadImgBtn {
+  margin-bottom: 20px;
+}
+
+.uploadedImg {
+  width: 100%;
+  height: auto;
+}

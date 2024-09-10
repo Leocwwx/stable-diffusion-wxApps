@@ -52,8 +52,5 @@
 <!--图片上传-->
 <view class="imgPart">
   <button class="uploadImgBtn" type="primary" bindtap="uploadImgSlt">拍照或上传图片</button>
-  <view wx:if="{{isUploadImgClick}}">
-    <picker mode="selector">hhhh</picker>
-  </view>
- 
+  <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" class="uploadedImg"/>
 </view>
