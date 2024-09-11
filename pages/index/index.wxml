@@ -52,5 +52,15 @@
 <!--图片上传-->
 <view class="imgPart">
   <button class="uploadImgBtn" type="primary" bindtap="uploadImgSlt">拍照或上传图片</button>
-  <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" class="uploadedImg"/>
+</view>
+
+<!--图片显示部分-->
+<view class="showImg">
+  <view class="srcImag">
+    <image wx:if="{{imagePath}}"  src="{{imagePath}}" mode="aspectFit" class="uploadedImg"></image>
+    <image wx:else="{{imagePath==''}}" src="../../res/test.jpg" mode="aspectFit" class="uploadedImg"/>
+  </view>
+  <view class="srcBoom">
+    <button class="boomBtn"></button>
+  </view>
 </view>

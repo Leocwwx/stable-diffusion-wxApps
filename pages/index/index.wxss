@@ -97,6 +97,11 @@
 }
 
 .uploadedImg {
-  width: 100%;
-  height: auto;
+  background-color: black;
+    width: 150px; /* 固定宽度 */
+    height: 150px; /* 固定高度 */
+    object-fit: cover; /* 保持图片比例，覆盖容器 */
+    border: 1px solid #ccc; /* 可选的边框 */
+    float: left; /* 使图片浮动到左边 */
+    margin-right: 10px; /* 可选，添加右边距以防止其他内容与图片重叠 */
 }
