@@ -61,6 +61,10 @@
     <image wx:else="{{imagePath==''}}" src="../../res/test.jpg" mode="aspectFit" class="uploadedImg"/>
   </view>
   <view class="srcBoom">
-    <button class="boomBtn"></button>
+    <button class="boomBtn" type = "default">转换</button>
+  </view>
+  <view class="resImag">
+    <image wx:if="{{imagePath}}"  src="{{imagePath}}" mode="aspectFit" class="resImagArea"></image>
+    <image wx:else="{{imagePath==''}}" src="../../res/wchat.jpg" mode="aspectFit" class="resImagArea"/>
   </view>
 </view>
